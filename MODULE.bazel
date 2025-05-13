@@ -53,20 +53,21 @@ bazel_dep(name = "protoc-gen-validate", version = "1.2.1.bcr.1")
 # compilation DB; build_cleaner
 bazel_dep(name = "bant", version = "0.2.0", dev_dependency = True)
 
-local_path_override(module_name = "rules_hdl", path = "/home/lromor/Projects/Job/amorphic/rules_hdl")
-local_path_override(module_name = "llvm-project", path = "/home/lromor/Projects/Job/amorphic/llvm-project")
-local_path_override(module_name = "zstd", path = "/home/lromor/Projects/Job/amorphic/zstd")
-
-# git_override(
-#     module_name = "llvm-project",
-#     commit = "4843b7029b9aff2ddd8a7fac17009f91c582df84",
-#     remote = "https://github.com/amorphic-io/llvm-project",
-# )
-# git_override(
-#     module_name = "zstd",
-#     commit = "14238b0eb47402f12fcc8dfd052f0b90cebd9f7a",
-#     remote = "https://github.com/amorphic-io/zstd",
-# )
+git_override(
+    module_name = "llvm-project",
+    commit = "93c4a9c7b9d2fef50ad97c80efa54ccaed7df0c8",
+    remote = "https://github.com/amorphic-io/llvm-project",
+)
+git_override(
+    module_name = "rules_hdl",
+    commit = "f9543189bb05011baae8641635051ab9fc9e3aef",
+    remote = "https://github.com/amorphic-io/rules_hdl",
+)
+git_override(
+    module_name = "zstd",
+    commit = "4843b7029b9aff2ddd8a7fac17009f91c582df84",
+    remote = "https://github.com/amorphic-io/zstd",
+)
 git_override(
     module_name = "io_bazel_rules_closure",
     commit = "39aefd7a0a355e8b93c85bf275f3c119454e6830",
