@@ -160,8 +160,8 @@ cc_library(
         "@abseil-cpp//absl/strings",
         "@abseil-cpp//absl/strings:str_format",
         "@abseil-cpp//absl/types:span",
-        "@com_google_ortools//ortools/math_opt/cpp:math_opt",
-        "@com_google_ortools//ortools/math_opt/solvers:glop_solver",
+        "@or-tools//ortools/math_opt/cpp:math_opt",
+        "@or-tools//ortools/math_opt/solvers:glop_solver",
     ],
 )
 
@@ -350,7 +350,7 @@ cc_library(
         "@abseil-cpp//absl/log:check",
         "@abseil-cpp//absl/log:vlog_is_on",
         "@abseil-cpp//absl/types:span",
-        "@com_google_ortools//ortools/graph:max_flow",
+        "@or-tools//ortools/graph:max_flow",
     ],
 )
 

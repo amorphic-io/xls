@@ -42,7 +42,7 @@ BAZEL_OPTS="-c opt --remote_download_outputs=all"
   //xls/solvers:z3_ir_translator \
   //xls/contrib/mlir:{math_to_xls,arith_to_xls,scf_to_xls} \
   //xls/dslx/tests/trace_fmt_issue_651:trace_{u16,u21,s32,enum,u16_hex,u21_hex}_wrapper \
-  $("${BANT}" list-targets @com_google_ortools//... | awk '/cc_proto_library/ {print $3}') \
+  $("${BANT}" list-targets @or-tools//... | awk '/cc_proto_library/ {print $3}') \
   $("${BANT}" list-targets | \
     awk '/cc_proto_library|xls_dslx_cpp_type_library|cc_xls_ir_jit_wrapper|xls_ir_cc_library|gentbl_cc_library|cc_grpc_library/ {print $3}')
 

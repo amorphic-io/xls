@@ -988,8 +988,8 @@ cc_library(
         "@abseil-cpp//absl/log:check",
         "@abseil-cpp//absl/status:statusor",
         "@abseil-cpp//absl/types:span",
-        "@com_google_ortools//ortools/graph",
-        "@com_google_ortools//ortools/graph:cliques",
+        "@or-tools//ortools/graph",
+        "@or-tools//ortools/graph:cliques",
         "@cppitertools",
     ],
 )
@@ -1156,8 +1156,8 @@ cc_library(
         "@abseil-cpp//absl/status",
         "@abseil-cpp//absl/status:statusor",
         "@abseil-cpp//absl/strings",
-        "@com_google_ortools//ortools/graph",
-        "@com_google_ortools//ortools/graph:generic_max_flow",
+        "@or-tools//ortools/graph",
+        "@or-tools//ortools/graph:generic_max_flow",
     ],
 )
 
