@@ -15,7 +15,7 @@
 # pytype binary, test, library
 load("@grpc//bazel:cc_grpc_library.bzl", "cc_grpc_library")
 load("@grpc//bazel:python_rules.bzl", "py_grpc_library")
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 # Load proto_library
@@ -150,7 +150,7 @@ py_test(
         requirement("portpicker"),
         "//xls/common:runfiles",
         "@abseil-py//absl/testing:absltest",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -197,7 +197,7 @@ py_library(
         "//xls/ir:xls_op_name_py_pb2",
         "@abseil-py//absl/flags",
         "@abseil-py//absl/logging",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -244,6 +244,6 @@ cc_binary(
         "@com_google_absl//absl/log:check",
         "@com_google_absl//absl/status:statusor",
         "@com_google_absl//absl/strings",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
     ],
 )

@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # pytype tests are present in this file
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 load("@xls_pip_deps//:requirements.bzl", "requirement")
@@ -118,7 +118,7 @@ py_test(
         "//xls/common:runfiles",
         "//xls/synthesis:synthesis_py_pb2",
         "@abseil-py//absl/testing:absltest",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 

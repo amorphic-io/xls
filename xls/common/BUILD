@@ -86,8 +86,8 @@ cc_library(
     hdrs = ["proto_test_utils.h"],
     deps = [
         "@com_google_absl//absl/strings:str_format",
-        "@com_google_protobuf//:differencer",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:differencer",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )
@@ -109,7 +109,7 @@ cc_test(
         ":matcher_test_messages_cc_proto",
         ":proto_test_utils",
         ":xls_gunit_main",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )

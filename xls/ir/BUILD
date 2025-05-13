@@ -15,7 +15,7 @@
 # Compiler data structures for converting high level algorithms into Hardware
 # Description Language.
 
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 load("@xls_pip_deps//:requirements.bzl", "requirement")
@@ -643,7 +643,7 @@ cc_library(
         "@com_google_absl//absl/strings:str_format",
         "@com_google_absl//absl/types:span",
         "@com_google_absl//absl/types:variant",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
         "@re2",
     ],
 )
@@ -862,7 +862,7 @@ cc_library(
         "@com_google_absl//absl/strings:str_format",
         "@com_google_absl//absl/types:span",
         "@com_google_absl//absl/types:variant",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
     ],
 )
 
@@ -1127,7 +1127,7 @@ cc_test(
         "@com_google_absl//absl/status:status_matchers",
         "@com_google_absl//absl/status:statusor",
         "@com_google_absl//absl/types:span",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )
@@ -2263,8 +2263,8 @@ cc_binary(
         ":op_list",
         ":xls_op_name_cc_proto",
         "//xls/common:init_xls",
-        "@com_google_protobuf//:protobuf",
-        "@com_google_protobuf//src/google/protobuf/io",
+        "@protobuf//:protobuf",
+        "@protobuf//src/google/protobuf/io",
     ],
 )
 

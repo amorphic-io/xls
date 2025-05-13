@@ -15,7 +15,7 @@
 load("@bazel_skylib//rules:build_test.bzl", "build_test")
 
 # pytype test and library
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 load("@xls_pip_deps//:requirements.bzl", "requirement")
 
@@ -81,7 +81,7 @@ cc_library(
         "@com_google_absl//absl/strings",
         "@com_google_absl//absl/strings:str_format",
         "@com_google_absl//absl/time",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
     ],
 )
 
@@ -523,8 +523,8 @@ cc_library(
         "@com_google_absl//absl/strings:str_format",
         "@com_google_absl//absl/time",
         "@com_google_absl//absl/types:span",
-        "@com_google_protobuf//:differencer",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:differencer",
+        "@protobuf//:protobuf",
         "@re2",
     ],
 )
@@ -585,8 +585,8 @@ cc_binary(
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/status:statusor",
         "@com_google_absl//absl/strings:str_format",
-        "@com_google_protobuf//:protobuf",
-        "@com_google_protobuf//:protobuf_lite",
+        "@protobuf//:protobuf",
+        "@protobuf//:protobuf_lite",
     ],
 )
 
@@ -689,7 +689,7 @@ py_test(
         "//xls/ir:op_py_pb2",
         "@abseil-py//absl/logging",
         "@abseil-py//absl/testing:absltest",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -1015,7 +1015,7 @@ cc_library(
         "@com_google_absl//absl/status:statusor",
         "@com_google_absl//absl/strings",
         "@com_google_absl//absl/time",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
     ],
 )
 

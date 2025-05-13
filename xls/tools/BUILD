@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # pytype binary and test
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 # Load proto_library
@@ -110,8 +110,8 @@ cc_library(
         "@com_google_absl//absl/strings",
         "@com_google_absl//absl/strings:str_format",
         "@com_google_absl//absl/types:span",
-        "@com_google_protobuf//:protobuf",
-        "@com_google_protobuf//src/google/protobuf/compiler:importer",
+        "@protobuf//:protobuf",
+        "@protobuf//src/google/protobuf/compiler:importer",
     ],
 )
 
@@ -145,7 +145,7 @@ cc_test(
         "//xls/common/status:matchers",
         "//xls/dslx/frontend:module",
         "//xls/dslx/frontend:pos",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )
@@ -279,7 +279,7 @@ cc_test(
         "//xls/ir:value",
         "@com_google_absl//absl/container:btree",
         "@com_google_absl//absl/status:status_matchers",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )
@@ -414,7 +414,7 @@ cc_binary(
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/strings:str_format",
         "@com_google_absl//absl/types:span",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
     ],
 )
 
@@ -776,7 +776,7 @@ py_test(
         "@abseil-py//absl/flags",
         "@abseil-py//absl/testing:absltest",
         "@abseil-py//absl/testing:parameterized",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -986,7 +986,7 @@ py_binary(
         "//xls/common:gfile",
         "@abseil-py//absl:app",
         "@abseil-py//absl/flags",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -1033,6 +1033,6 @@ cc_library(
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/status:statusor",
         "@com_google_absl//absl/types:span",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
     ],
 )

@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 load("//xls/contrib/xlscc/build_rules:cc_generator.bzl", "xls_ac_fuzz_binaries")
@@ -145,8 +145,8 @@ cc_test(
         "@com_google_absl//absl/container:flat_hash_map",
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/status:status_matchers",
-        "@com_google_protobuf//:differencer",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:differencer",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )
@@ -180,8 +180,8 @@ cc_test(
         "@com_google_absl//absl/status:status_matchers",
         "@com_google_absl//absl/strings",
         "@com_google_absl//absl/strings:str_format",
-        "@com_google_protobuf//:differencer",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:differencer",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )
@@ -233,8 +233,8 @@ cc_test(
         "//xls/common/status:matchers",
         "//xls/contrib/xlscc:metadata_output_cc_proto",
         "//xls/contrib/xlscc:translator",
-        "@com_google_protobuf//:differencer",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:differencer",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )

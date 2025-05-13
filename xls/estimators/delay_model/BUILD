@@ -16,7 +16,7 @@ load("@rules_hdl//dependency_support/com_google_skywater_pdk:cells_info.bzl", "f
 load("@rules_hdl//dependency_support/org_theopenroadproject_asap7_pdk_r1p7:cells_info.bzl", "for_each_asap7_cells")
 
 # pytype binary only
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 load("@xls_pip_deps//:requirements.bzl", "requirement")
 
@@ -211,7 +211,7 @@ py_binary(
         "//xls/estimators:estimator_model_py_pb2",
         "@abseil-py//absl:app",
         "@abseil-py//absl/flags",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -256,7 +256,7 @@ cc_test(
         "@com_google_absl//absl/algorithm:container",
         "@com_google_absl//absl/log:check",
         "@com_google_absl//absl/status:statusor",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
     ],
 )

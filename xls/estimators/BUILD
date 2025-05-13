@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # pytype binary, test, library
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 # Load proto_library
@@ -60,7 +60,7 @@ py_test(
         ":estimator_model",
         ":estimator_model_py_pb2",
         "@abseil-py//absl/testing:absltest",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -74,7 +74,7 @@ py_library(
     deps = [
         "//xls/codegen:module_signature_py_pb2",
         "//xls/common:runfiles",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -99,7 +99,7 @@ py_binary(
         "//xls/common:gfile",
         "@abseil-py//absl:app",
         "@abseil-py//absl/flags",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -142,7 +142,7 @@ py_binary(
         "//xls/common:gfile",
         "@abseil-py//absl:app",
         "@abseil-py//absl/flags",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 
@@ -169,7 +169,7 @@ py_binary(
         "@abseil-py//absl:app",
         "@abseil-py//absl/flags",
         "@abseil-py//absl/logging",
-        "@com_google_protobuf//:protobuf_python",
+        "@protobuf//:protobuf_python",
     ],
 )
 

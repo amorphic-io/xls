@@ -23,7 +23,7 @@ load("@bazel_skylib//rules:build_test.bzl", "build_test")
 # cc_proto_library is used in this file
 
 # pytype binary only
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 load("//xls/contrib/xlscc/build_rules:ac_types_stub.bzl", "ac_types_stub_headers")
 

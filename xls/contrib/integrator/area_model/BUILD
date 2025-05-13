@@ -15,7 +15,7 @@
 # Delay models.
 
 # pytype binary only
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 load("//xls/estimators/delay_model:build_defs.bzl", "delay_model")
 

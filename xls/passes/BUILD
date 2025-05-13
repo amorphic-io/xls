@@ -15,7 +15,7 @@
 # Optimization passes, pass managers.
 
 # pytype binary only
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 # Load proto_library
 # cc_proto_library is used in this file
 
@@ -65,7 +65,7 @@ cc_binary(
         "@com_google_absl//absl/flags:flag",
         "@com_google_absl//absl/log",
         "@com_google_absl//absl/status",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
     ],
 )
 
@@ -88,7 +88,7 @@ proto_library(
     srcs = ["pass_metrics.proto"],
     deps = [
         "//xls/ir:transform_metrics_proto",
-        "@com_google_protobuf//:duration_proto",
+        "@protobuf//:duration_proto",
     ],
 )
 
@@ -1614,7 +1614,7 @@ cc_library(
         "@com_google_absl//absl/strings:str_format",
         "@com_google_absl//absl/time",
         "@com_google_absl//absl/types:span",
-        "@com_google_protobuf//:duration_cc_proto",
+        "@protobuf//:duration_cc_proto",
     ],
 )
 
@@ -1700,7 +1700,7 @@ cc_test(
         "@com_google_absl//absl/status:status_matchers",
         "@com_google_absl//absl/status:statusor",
         "@com_google_absl//absl/strings",
-        "@com_google_protobuf//:protobuf",
+        "@protobuf//:protobuf",
         "@googletest//:gtest",
         "@re2",
     ],

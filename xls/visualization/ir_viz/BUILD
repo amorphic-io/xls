@@ -189,8 +189,8 @@ cc_binary(
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/status:statusor",
         "@com_google_absl//absl/strings:str_format",
-        "@com_google_protobuf//:protobuf",
-        "@com_google_protobuf//src/google/protobuf/io",
+        "@protobuf//:protobuf",
+        "@protobuf//src/google/protobuf/io",
     ],
 )
 
@@ -207,7 +207,7 @@ cc_library(
         "//xls/scheduling:pipeline_schedule",
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/status:statusor",
-        "@com_google_protobuf//:json_util",
+        "@protobuf//:json_util",
     ],
 )
 

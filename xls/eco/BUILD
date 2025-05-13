@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # pytype binary, test, library
-load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@protobuf//bazel:py_proto_library.bzl", "py_proto_library")
 load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 # Load proto_library
@@ -47,7 +47,7 @@ cc_binary(
         "@com_google_absl//absl/log",
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/strings",
-        "@com_google_protobuf//:json_util",
+        "@protobuf//:json_util",
     ],
 )
 
