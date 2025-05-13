@@ -349,7 +349,7 @@ cc_test(
         ":unit_test",
         "//xls/common:source_location",
         "//xls/common:xls_gunit_main",
-        "@com_github_hlslibs_ac_types//:ac_int",
+        "@ac-types//:ac_int",
         "@googletest//:gtest",
     ],
 )
@@ -389,7 +389,7 @@ cc_test(
         ":unit_test",
         "//xls/common:source_location",
         "//xls/common:xls_gunit_main",
-        "@com_github_hlslibs_ac_types//:ac_fixed",
+        "@ac-types//:ac_fixed",
         "@googletest//:gtest",
     ],
 )

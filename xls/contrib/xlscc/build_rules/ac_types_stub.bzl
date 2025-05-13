@@ -34,7 +34,7 @@ ac_types_stub_headers = rule(
     implementation = _ac_types_stub_headers_impl,
     attrs = {
         "data": attr.label(
-            default = Label("@com_github_hlslibs_ac_types//:ac_types_as_data"),
+            default = Label("@ac-types//:ac_types_as_data"),
             cfg = "target",
         ),
         "include_prefix": attr.string(mandatory = True)
