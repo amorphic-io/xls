@@ -1,6 +1,4 @@
 {
-  description = "fpga-assembler";
-
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/2c8d3f48d33929642c1c12cd243df4cc7d2ce434";
     flake-utils.url = "github:numtide/flake-utils";
