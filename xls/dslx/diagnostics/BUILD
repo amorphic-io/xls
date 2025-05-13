@@ -35,10 +35,10 @@ cc_library(
         "//xls/dslx/frontend:ast_utils",
         "//xls/dslx/type_system:type",
         "//xls/dslx/type_system:type_info",
-        "@com_google_absl//absl/container:flat_hash_set",
-        "@com_google_absl//absl/status",
-        "@com_google_absl//absl/strings",
-        "@com_google_absl//absl/strings:str_format",
+        "@abseil-cpp//absl/container:flat_hash_set",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/strings:str_format",
     ],
 )
 
@@ -71,10 +71,10 @@ cc_library(
         "//xls/dslx/frontend:pos",
         "//xls/dslx/type_system:type",
         "//xls/dslx/type_system:type_mismatch_error_data",
-        "@com_google_absl//absl/log",
-        "@com_google_absl//absl/log:check",
-        "@com_google_absl//absl/status",
-        "@com_google_absl//absl/strings:str_format",
+        "@abseil-cpp//absl/log",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/strings:str_format",
     ],
 )
 
@@ -97,7 +97,7 @@ cc_test(
         "//xls/dslx/type_system:type_info",
         "//xls/dslx/type_system:type_mismatch_error_data",
         "//xls/dslx/type_system:typecheck_module",
-        "@com_google_absl//absl/status",
+        "@abseil-cpp//absl/status",
         "@googletest//:gtest",
     ],
 )
@@ -113,12 +113,12 @@ cc_library(
         "//xls/dslx/frontend:pos",
         "//xls/dslx/type_system:type",
         "//xls/dslx/type_system:zip_types",
-        "@com_google_absl//absl/log:check",
-        "@com_google_absl//absl/status",
-        "@com_google_absl//absl/status:statusor",
-        "@com_google_absl//absl/strings",
-        "@com_google_absl//absl/strings:str_format",
-        "@com_google_absl//absl/types:variant",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/strings:str_format",
+        "@abseil-cpp//absl/types:variant",
     ],
 )
 

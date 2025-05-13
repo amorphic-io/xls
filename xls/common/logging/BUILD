@@ -33,10 +33,10 @@ cc_library(
     visibility = ["//xls:xls_utility_users"],
     deps = [
         ":log_flags",
-        "@com_google_absl//absl/base:log_severity",
-        "@com_google_absl//absl/log",
-        "@com_google_absl//absl/log:vlog_is_on",
-        "@com_google_absl//absl/strings:string_view",
+        "@abseil-cpp//absl/base:log_severity",
+        "@abseil-cpp//absl/log",
+        "@abseil-cpp//absl/log:vlog_is_on",
+        "@abseil-cpp//absl/strings:string_view",
     ],
 )
 
@@ -46,8 +46,8 @@ cc_test(
     deps = [
         ":log_lines",
         "//xls/common:xls_gunit_main",
-        "@com_google_absl//absl/base:log_severity",
-        "@com_google_absl//absl/log:scoped_mock_log",
+        "@abseil-cpp//absl/base:log_severity",
+        "@abseil-cpp//absl/log:scoped_mock_log",
         "@googletest//:gtest",
     ],
 )
@@ -61,10 +61,10 @@ cc_library(
     hdrs = ["log_flags.h"],
     visibility = ["//xls:xls_utility_users"],
     deps = [
-        "@com_google_absl//absl/base:log_severity",
-        "@com_google_absl//absl/flags:flag",
-        "@com_google_absl//absl/log:flags",
-        "@com_google_absl//absl/log:globals",
+        "@abseil-cpp//absl/base:log_severity",
+        "@abseil-cpp//absl/flags:flag",
+        "@abseil-cpp//absl/log:flags",
+        "@abseil-cpp//absl/log:globals",
     ],
     alwayslink = True,  # Provides some flags such as --alsologtostderr
 )
@@ -85,8 +85,8 @@ cc_binary(
     srcs = ["log_initialization_tester.cc"],
     deps = [
         "//xls/common:init_xls",
-        "@com_google_absl//absl/log",
-        "@com_google_absl//absl/log:vlog_is_on",
+        "@abseil-cpp//absl/log",
+        "@abseil-cpp//absl/log:vlog_is_on",
     ],
 )
 
@@ -94,5 +94,5 @@ cc_library(
     name = "scoped_vlog_level",
     hdrs = ["scoped_vlog_level.h"],
     visibility = ["//xls:xls_internal"],
-    deps = ["@com_google_absl//absl/log:globals"],
+    deps = ["@abseil-cpp//absl/log:globals"],
 )

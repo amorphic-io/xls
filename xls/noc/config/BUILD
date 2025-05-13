@@ -49,7 +49,7 @@ cc_library(
     deps = [
         ":network_config_cc_proto",
         "//xls/common:proto_adaptor_utils",
-        "@com_google_absl//absl/log:die_if_null",
+        "@abseil-cpp//absl/log:die_if_null",
     ],
 )
 
@@ -71,7 +71,7 @@ cc_library(
     deps = [
         ":network_config_cc_proto",
         "//xls/common:proto_adaptor_utils",
-        "@com_google_absl//absl/log:die_if_null",
+        "@abseil-cpp//absl/log:die_if_null",
     ],
 )
 
@@ -93,7 +93,7 @@ cc_library(
     deps = [
         ":network_config_cc_proto",
         "//xls/common:proto_adaptor_utils",
-        "@com_google_absl//absl/log:die_if_null",
+        "@abseil-cpp//absl/log:die_if_null",
     ],
 )
 
@@ -115,7 +115,7 @@ cc_library(
     deps = [
         ":network_config_cc_proto",
         ":network_config_proto_builder_utils",
-        "@com_google_absl//absl/log:die_if_null",
+        "@abseil-cpp//absl/log:die_if_null",
     ],
 )
 
@@ -138,8 +138,8 @@ cc_library(
         ":network_config_cc_proto",
         ":network_config_proto_builder_utils",
         "//xls/common:proto_adaptor_utils",
-        "@com_google_absl//absl/log:die_if_null",
-        "@com_google_absl//absl/types:span",
+        "@abseil-cpp//absl/log:die_if_null",
+        "@abseil-cpp//absl/types:span",
     ],
 )
 
@@ -165,7 +165,7 @@ cc_library(
         ":port_config_proto_builder",
         ":routing_scheme_config_proto_builder",
         "//xls/common:proto_adaptor_utils",
-        "@com_google_absl//absl/log:die_if_null",
+        "@abseil-cpp//absl/log:die_if_null",
     ],
 )
 
@@ -195,7 +195,7 @@ cc_library(
         ":router_config_proto_builder",
         ":virtual_channel_config_proto_builder",
         "//xls/common:proto_adaptor_utils",
-        "@com_google_absl//absl/status:statusor",
+        "@abseil-cpp//absl/status:statusor",
     ],
 )
 
@@ -236,7 +236,7 @@ cc_library(
     deps = [
         ":network_config_builder_options_cc_proto",
         ":network_config_cc_proto",
-        "@com_google_absl//absl/log:die_if_null",
+        "@abseil-cpp//absl/log:die_if_null",
     ],
 )
 
@@ -258,7 +258,7 @@ cc_library(
     hdrs = ["custom_network_config_builder_options_proto_builder.h"],
     deps = [
         ":network_config_builder_options_cc_proto",
-        "@com_google_absl//absl/log:die_if_null",
+        "@abseil-cpp//absl/log:die_if_null",
     ],
 )
 
