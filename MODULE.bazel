@@ -38,7 +38,7 @@ bazel_dep(name = "zstd", version = "1.5.7")
 bazel_dep(name = "rules_shell", version = "0.4.1")
 
 # Dev dependencies
-bazel_dep(name = "fuzztest", version = "20250214.0", dev_dependency = True, repo_name = "com_google_fuzztest")
+bazel_dep(name = "fuzztest", version = "20250214.0", dev_dependency = True)
 bazel_dep(name = "google_benchmark", version = "1.9.1", dev_dependency = True)
 bazel_dep(name = "googletest", version = "1.15.2", dev_dependency = True)
 

@@ -593,7 +593,7 @@ cc_library(
     deps = [
         ":benchmark_support",
         ":gunit_init_xls",
-        "@com_google_fuzztest//fuzztest:init_fuzztest",
+        "@fuzztest//fuzztest:init_fuzztest",
         "@googletest//:gtest",
     ],
     alwayslink = True,
