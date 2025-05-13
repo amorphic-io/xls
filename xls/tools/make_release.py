@@ -51,7 +51,7 @@ exports_files(glob(["*"]))
 """
 
 # WORKSPACE file to write into the release directory
-WORKSPACE_FILE = """workspace(name = "com_google_xls")
+WORKSPACE_FILE = """workspace(name = "xls")
 """
 
 

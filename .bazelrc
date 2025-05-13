@@ -16,7 +16,7 @@ common:ci --lockfile_mode=error
 
 # Disable rules_python Starlark rules for Bazel 7+.
 # See https://github.com/bazelbuild/rules_python/issues/1069#issuecomment-1942053014.
-build --action_env=RULES_PYTHON_ENABLE_PYSTAR=0
+#build --action_env=RULES_PYTHON_ENABLE_PYSTAR=0
 
 # Disable automatic generation of __init__.py files. This allows
 # namespace packages (such as `google`) to work correctly.
@@ -77,7 +77,7 @@ build --copt "-Wno-deprecated-copy-with-user-provided-copy" --host_copt "-Wno-de
 # https://github.com/google/googletest/issues/4383
 build --define absl=1
 build --incompatible_enable_cc_toolchain_resolution
-build --@llvm_zstd//:llvm_enable_zstd=false
+#build --@llvm_zstd//:llvm_enable_zstd=false
 
 # Do not use some deps from or-tools
 build --@com_google_ortools//ortools/algorithms:with_scip=false

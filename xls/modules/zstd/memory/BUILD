@@ -126,7 +126,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "axi_reader_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "axi_reader",
     deps = [
@@ -201,7 +201,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "axi_stream_remove_empty_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "axi_stream_remove_empty",
     deps = [
@@ -275,7 +275,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "axi_stream_downscaler_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "axi_stream_downscaler",
     deps = [
@@ -353,7 +353,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "mem_reader_internal_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "mem_reader_internal",
     deps = [
@@ -409,7 +409,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "mem_reader_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "mem_reader",
     deps = [
@@ -465,7 +465,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "mem_reader_adv_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "mem_reader_adv",
     deps = [
@@ -544,7 +544,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "axi_writer_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "axi_writer",
     deps = [
@@ -621,7 +621,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "axi_stream_add_empty_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "axi_stream_add_empty",
     deps = [
@@ -695,7 +695,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "mem_writer_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "mem_writer",
     deps = [

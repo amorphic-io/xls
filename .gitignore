@@ -9,3 +9,6 @@ user.bazelrc
 .vscode
 .cache
 docs/
+MODULE.bazel.lock
+/.direnv
+/.envrc

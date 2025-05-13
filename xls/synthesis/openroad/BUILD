@@ -13,6 +13,8 @@
 # limitations under the License.
 
 # pytype tests are present in this file
+load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 load("@xls_pip_deps//:requirements.bzl", "requirement")
 
@@ -32,7 +34,7 @@ cc_binary(
         "//xls/common:exit_status",
         "//xls/common:init_xls",
         "//xls/common/file:filesystem",
-        "@at_clifford_yosys//:json11",
+        "@json11//:json11",
         "@com_google_absl//absl/flags:flag",
         "@com_google_absl//absl/status",
         "@com_google_absl//absl/strings",
@@ -50,7 +52,7 @@ cc_binary(
         "//xls/synthesis:credentials",
         "//xls/synthesis:synthesis_cc_proto",
         "//xls/synthesis:synthesis_service_cc_grpc",
-        "@at_clifford_yosys//:json11",
+        "@json11//:json11",
         "@com_google_absl//absl/flags:flag",
         "@com_google_absl//absl/log",
         "@com_google_absl//absl/status",

@@ -46,8 +46,8 @@
 #include "xls/ir/bits.h"
 #include "xls/ir/value.h"
 #include "xls/modules/zstd/data_generator.h"
-#include "external/zstd/lib/zstd.h"
-#include "external/zstd/lib/zstd_errors.h"
+#include "zstd.h"
+#include "zstd_errors.h"
 
 namespace xls {
 namespace {

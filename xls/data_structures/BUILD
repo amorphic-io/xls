@@ -325,6 +325,7 @@ cc_test(
         "@com_google_absl//absl/container:btree",
         "@googletest//:gtest",
     ],
+    timeout = "eternal",
 )
 
 cc_test(

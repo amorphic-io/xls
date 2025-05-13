@@ -26,8 +26,8 @@ cc_library(
     name = "iverilog_simulator",
     srcs = ["iverilog_simulator.cc"],
     data = [
-        "@com_icarus_iverilog//:iverilog",
-        "@com_icarus_iverilog//:vvp",
+        "@iverilog//:iverilog",
+        "@iverilog//:vvp",
     ],
     deps = [
         "//xls/codegen/vast",

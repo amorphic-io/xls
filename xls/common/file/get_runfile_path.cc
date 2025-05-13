@@ -69,7 +69,7 @@ absl::StatusOr<Runfiles*> GetRunfiles(
     }
 
     std::string error;
-    runfiles = Runfiles::Create(path.string(), &error);
+    runfiles = Runfiles::Create(path.string(), BAZEL_CURRENT_REPOSITORY, &error);
     if (runfiles == nullptr) {
       return absl::UnknownError(
           absl::StrCat("Failed to initialize Runfiles: ", error));
@@ -84,7 +84,13 @@ absl::StatusOr<Runfiles*> GetRunfiles(
 absl::StatusOr<std::filesystem::path> GetXlsRunfilePath(
     const std::filesystem::path& path) {
   XLS_ASSIGN_OR_RETURN(Runfiles * runfiles, GetRunfiles());
-  return runfiles->Rlocation("com_google_xls" / path);
+  std::string p = path.string();
+  // If it starts with @, consider it as an external file.
+  if (p[0] == '@') {
+    p = p.substr(1);
+    return runfiles->Rlocation(p);
+  }
+  return runfiles->Rlocation("xls" / path);
 }
 
 absl::Status InitRunfilesDir(const std::string& argv0) {

@@ -164,6 +164,7 @@ absl::StatusOr<YosysSynthesisStatistics> ParseYosysOutput(
 }  //  ParseYosysOutput
 
 absl::StatusOr<STAStatistics> ParseOpenSTAOutput(std::string_view sta_output) {
+  std::cout << sta_output << std::endl;
   STAStatistics stats;
 
   std::string clk_period_ps;
@@ -175,7 +176,7 @@ absl::StatusOr<STAStatistics> ParseOpenSTAOutput(std::string_view sta_output) {
   static constexpr LazyRE2 clk_period_regex = {
       .pattern_ = R"(op_clk period_min = (\d+\.\d+) fmax = (\d+\.\d+))"};
   static constexpr LazyRE2 slack_regex = {.pattern_ =
-                                              R"(^worst slack (-?\d+.\d+))"};
+                                              R"(^worst slack max (-?\d+.\d+))"};
 
   for (std::string_view line : absl::StrSplit(sta_output, '\n')) {
     line = absl::StripAsciiWhitespace(line);

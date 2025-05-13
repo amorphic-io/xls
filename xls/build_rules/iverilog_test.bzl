@@ -60,11 +60,11 @@ def iverilog_test(name, top, main, srcs, execute = True, tick_defines = None):
         # that points at the genfiles' location, we have to add it to the
         # searched set of paths for inclusions so we can include generated
         # verilog files as we can generated C++ files in cc_library rules.
-        cmd = "$(location @com_icarus_iverilog//:iverilog) -s %s $(location %s) %s -o $@ -g2001 -I$(GENDIR)" % (top, main, defines),
+        cmd = "$(location @iverilog//:iverilog) -s %s $(location %s) %s -o $@ -g2001 -I$(GENDIR)" % (top, main, defines),
         outs = [name + ".iverilog.out"],
         tools = [
-            "@com_icarus_iverilog//:iverilog",
-            "@com_icarus_iverilog//:vvp",
+            "@iverilog//:iverilog",
+            "@iverilog//:vvp",
         ],
     )
     if execute:
@@ -80,7 +80,7 @@ def iverilog_test(name, top, main, srcs, execute = True, tick_defines = None):
             srcs = [":" + name + "-vvp-runner"],
             data = [
                 ":" + name + "-iverilog-build",
-                "@com_icarus_iverilog//:vvp",
+                "@iverilog//:vvp",
             ],
         )
         tests.append(":" + name + "-run_test")

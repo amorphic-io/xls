@@ -14,6 +14,8 @@
 
 # pytype binary and test
 load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+
 # Load proto_library
 # cc_proto_library is used in this file
 

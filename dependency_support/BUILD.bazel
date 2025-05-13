@@ -15,7 +15,7 @@
 load("@rules_python//python:pip.bzl", "compile_pip_requirements")
 
 compile_pip_requirements(
-    name = "pip_requirements",
-    requirements_in = "pip_requirements.in",
+    name = "requirements",
+    src = "pip_requirements.in",
     requirements_txt = "pip_requirements_lock.txt",
 )

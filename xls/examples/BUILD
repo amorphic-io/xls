@@ -221,7 +221,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "riscv_simple_verilog_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
     tags = ["manual"],
     top_module = "run_instruction",
     deps = [":riscv_simple_verilog"],
@@ -667,7 +667,7 @@ synthesize_rtl(
 
 synthesize_rtl(
     name = "find_index_5000ps_model_unit_verilog_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_27//:asap7-sc7p5t_rev27_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_27//:asap7-sc7p5t_rev27_rvt",
     top_module = "find_index",
     deps = [
         ":find_index_5000ps_model_unit_verilog",
@@ -848,7 +848,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "delay_verilog_synth",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
     tags = ["manual"],
     top_module = "delay_top",
     deps = [":delay"],
@@ -1204,7 +1204,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "serialized_decomposer_verilog_synth",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
     tags = ["manual"],
     top_module = "serialized_decomposer_top",
     deps = [":serialized_decomposer"],

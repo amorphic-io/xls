@@ -17,14 +17,14 @@
 import os
 from typing import Iterable
 
-from rules_python.python.runfiles import runfiles
+from python.runfiles import Runfiles
 
-_BASE_PATH = 'com_google_xls'
+_BASE_PATH = 'xls'
 
 
 def get_path(relpath: str, *, repository: str = _BASE_PATH) -> str:
   path = os.path.join(repository, relpath)
-  r = runfiles.Create()
+  r = Runfiles.Create()
   runfile_path = r.Rlocation(path)
   if not os.path.exists(runfile_path):
     raise FileNotFoundError(

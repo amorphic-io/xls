@@ -102,7 +102,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "window_buffer_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "WindowBuffer64",
     deps = [
@@ -271,7 +271,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "frame_header_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "FrameHeaderDecoder",
     deps = [
@@ -350,7 +350,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "raw_block_dec_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "RawBlockDecoder",
     deps = [
@@ -438,7 +438,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "rle_block_dec_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "RleBlockDecoder",
     deps = [
@@ -534,7 +534,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "dec_mux_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "DecoderMux",
     deps = [
@@ -613,7 +613,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "dec_demux_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "DecoderDemux",
     deps = [
@@ -702,7 +702,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "block_dec_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "BlockDecoder",
     deps = [
@@ -831,7 +831,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "sequence_executor_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "sequence_executor",
     deps = [
@@ -909,7 +909,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "repacketizer_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "Repacketizer",
     deps = [
@@ -1057,7 +1057,7 @@ verilog_library(
 
 synthesize_rtl(
     name = "zstd_dec_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
     tags = ["manual"],
     top_module = "ZstdDecoder",
     deps = [

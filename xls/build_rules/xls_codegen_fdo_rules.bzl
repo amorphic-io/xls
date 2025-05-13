@@ -116,12 +116,12 @@ xls_ir_verilog_attrs = {
               "used.",
     ),
     "yosys_tool": attr.label(
-        default = Label("@at_clifford_yosys//:yosys"),
+        default = Label("@yosys//:yosys"),
         executable = True,
         cfg = "exec",
     ),
     "sta_tool": attr.label(
-        default = Label("@org_theopenroadproject//:opensta"),
+        default = Label("@openroad//:opensta"),
         executable = True,
         cfg = "exec",
     ),
@@ -364,10 +364,7 @@ def xls_ir_verilog_fdo_impl(ctx, src, original_input_files):
         yosys_runfiles_dir = ctx.executable.yosys_tool.path + ".runfiles"
         opensta_runfiles_dir = ctx.executable.sta_tool.path + ".runfiles"
         env = {
-            "ABC": yosys_runfiles_dir + "/edu_berkeley_abc/abc",
             "DONT_USE_ARGS": dont_use_args,
-            "YOSYS_DATDIR": yosys_runfiles_dir + "/" + "at_clifford_yosys/techlibs/",
-            "TCL_LIBRARY": opensta_runfiles_dir + "/tk_tcl/library",
         }
     else:
         env = {}
@@ -388,6 +385,7 @@ def xls_ir_verilog_fdo_impl(ctx, src, original_input_files):
             src.ir_file.path,
             final_args,
         ),
+        use_default_shell_env = True,
         env = env,
         mnemonic = "Codegen",
         progress_message = "Building Verilog file: %s" % (verilog_file.path),

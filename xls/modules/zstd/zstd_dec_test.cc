@@ -53,7 +53,7 @@
 #include "xls/ir/value.h"
 #include "xls/jit/jit_proc_runtime.h"
 #include "xls/modules/zstd/data_generator.h"
-#include "external/zstd/lib/zstd.h"
+#include "zstd.h"
 
 namespace xls {
 namespace {

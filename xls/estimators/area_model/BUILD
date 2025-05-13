@@ -15,6 +15,8 @@
 # pytype binary, test, library
 load("@rules_hdl//dependency_support/com_google_skywater_pdk:cells_info.bzl", "for_each_sky130_cells")
 load("@rules_hdl//dependency_support/org_theopenroadproject_asap7_pdk_r1p7:cells_info.bzl", "for_each_asap7_cells")
+load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 load("@xls_pip_deps//:requirements.bzl", "requirement")
 load("//xls/build_rules:xls_build_defs.bzl", "xls_model_generation")
 
@@ -157,7 +159,7 @@ xls_model_generation(
 xls_model_generation(
     name = "data_points-asap7",
     samples_file = ":samples.textproto",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_28//:asap7-sc7p5t_rev28_rvt",
 )
 
 [
@@ -184,6 +186,6 @@ xls_model_generation(
 xls_model_generation(
     name = "data_points-asap7-sc7p5t_rev27_rvt_4x",
     samples_file = ":samples.textproto",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
     tags = ["manual"],
 )

@@ -16,6 +16,8 @@
 # Description Language.
 
 load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+
 load("@xls_pip_deps//:requirements.bzl", "requirement")
 
 # Load proto_library

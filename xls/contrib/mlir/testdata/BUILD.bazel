@@ -32,9 +32,10 @@ from python.runfiles import Runfiles
 from pathlib import Path
 
 r = Runfiles.Create()
-LITE_CFG_PY = Path(r.Rlocation("com_google_xls/xls/contrib/mlir/testdata/lit.cfg.py"))
+LITE_CFG_PY = Path(r.Rlocation("xls/xls/contrib/mlir/testdata/lit.cfg.py"))
+LLVM_TOOLS_DIR = Path(r.Rlocation("llvm-project/llvm/FileCheck")).parent
+
 RUNFILES_DIR = LITE_CFG_PY.parents[3].absolute().as_posix()''',
-        "@LLVM_TOOLS_DIR@": "../../llvm-project/llvm",
     },
     template = "lit.site.cfg.py.in",
 )

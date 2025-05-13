@@ -182,7 +182,7 @@ gds_write(
 
 synthesize_rtl(
     name = "rle_enc_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_27//:asap7-sc7p5t_rev27_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_27//:asap7-sc7p5t_rev27_rvt",
     top_module = "rle_enc",
     deps = [
         ":rle_enc_verilog_lib",
@@ -308,7 +308,7 @@ gds_write(
 
 synthesize_rtl(
     name = "rle_dec_synth_asap7",
-    standard_cells = "@org_theopenroadproject_asap7sc7p5t_27//:asap7-sc7p5t_rev27_rvt",
+    standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_27//:asap7-sc7p5t_rev27_rvt",
     top_module = "rle_dec",
     deps = [
         ":rle_dec_verilog_lib",

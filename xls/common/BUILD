@@ -17,6 +17,7 @@
 # pytype test and library
 # Load proto_library
 # cc_proto_library is used in this file
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
 
 package(
     default_applicable_licenses = ["//:license"],

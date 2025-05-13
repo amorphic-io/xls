@@ -18,11 +18,14 @@
 # Email xls-team@ or seanhaskell@ if a dependency is desired.
 
 load("@bazel_skylib//rules:build_test.bzl", "build_test")
+
 # Load proto_library
 # cc_proto_library is used in this file
 
 # pytype binary only
 load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+load("//xls/contrib/xlscc/build_rules:ac_types_stub.bzl", "ac_types_stub_headers")
 
 package(
     default_applicable_licenses = ["//:license"],
@@ -192,6 +195,12 @@ cc_library(
         "@llvm-project//clang:tooling",
         "@llvm-project//llvm:Support",
     ],
+)
+
+ac_types_stub_headers(
+    name = "ac_headers_stub",
+    include_prefix ="_ac_types_stub",
+    visibility = ["//xls/contrib/xlscc:__subpackages__"],
 )
 
 filegroup(

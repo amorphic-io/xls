@@ -235,7 +235,7 @@ xls_ir_opt_ir(
         ),
         synthesize_rtl(
             name = "mem_iterated_read_{iterations}_synth_asap7".format(iterations = read_iterations),
-            standard_cells = "@org_theopenroadproject_asap7sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
+            standard_cells = "@org_theopenroadproject_asap7_pdk_sc7p5t_27//:asap7-sc7p5t_rev27_rvt_4x",
             tags = ["manual"],
             top_module = "mem_iterated_read",
             deps = [

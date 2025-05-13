@@ -12,7 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-load("@rules_python//python:defs.bzl", "py_test")
+load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+
 load("//xls/contrib/xlscc/build_rules:cc_generator.bzl", "xls_ac_fuzz_binaries")
 
 package(
@@ -223,7 +225,7 @@ cc_test(
     srcs = ["translator_metadata_test.cc"],
     data = [
         "//xls/contrib/xlscc:synth_only_headers",
-        "@com_github_hlslibs_ac_types//:ac_types_as_data",
+        "//xls/contrib/xlscc:ac_headers_stub",
     ],
     deps = [
         ":unit_test",
@@ -312,7 +314,7 @@ cc_test(
     srcs = ["synth_only_test.cc"],
     data = [
         "//xls/contrib/xlscc:synth_only_headers",
-        "@com_github_hlslibs_ac_types//:ac_types_as_data",
+        "//xls/contrib/xlscc:ac_headers_stub",
     ],
     shard_count = 10,
     tags = [
@@ -336,7 +338,7 @@ cc_test(
     srcs = ["xls_int_test.cc"],
     data = [
         "//xls/contrib/xlscc:synth_only_headers",
-        "@com_github_hlslibs_ac_types//:ac_types_as_data",
+        "//xls/contrib/xlscc:ac_headers_stub",
     ],
     shard_count = 10,
     tags = [
@@ -357,7 +359,7 @@ cc_test(
     srcs = ["xls_intrinsics_test.cc"],
     data = [
         "//xls/contrib/xlscc:synth_only_headers",
-        "@com_github_hlslibs_ac_types//:ac_types_as_data",
+        "//xls/contrib/xlscc:ac_headers_stub",
     ],
     tags = [
         "noasan",
@@ -376,7 +378,7 @@ cc_test(
     srcs = ["xls_fixed_test.cc"],
     data = [
         "//xls/contrib/xlscc:synth_only_headers",
-        "@com_github_hlslibs_ac_types//:ac_types_as_data",
+        "//xls/contrib/xlscc:ac_headers_stub",
     ],
     shard_count = 10,
     tags = [
@@ -409,7 +411,7 @@ cc_binary(
     data = [
         "//xls/contrib/xlscc",
         "//xls/contrib/xlscc:synth_only_headers",
-        "@com_github_hlslibs_ac_types//:ac_types_as_data",
+        "//xls/contrib/xlscc:ac_headers_stub",
     ],
     deps = [
         ":cc_generator",

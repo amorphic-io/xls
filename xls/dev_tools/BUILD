@@ -13,6 +13,9 @@
 # limitations under the License.
 
 # pytype binary and test
+load("@rules_python//python:proto.bzl", "py_proto_library")
+load("@rules_python//python:defs.bzl", "py_binary", "py_library", "py_test")
+
 load("//xls/build_rules:xls_build_defs.bzl", "xls_ir_equivalence_test")
 
 package(

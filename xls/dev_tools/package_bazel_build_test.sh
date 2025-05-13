@@ -38,7 +38,7 @@ cat $TESTDATA_DIR/bazel-bin/package_test.runfiles_manifest
 BINPATH=./xls/dev_tools/package_bazel_build
 $BINPATH \
 --bazel_bin $TESTDATA_DIR/bazel-bin \
---bazel_execroot $TESTDATA_DIR/hash/execroot/com_google_xls \
+--bazel_execroot $TESTDATA_DIR/hash/execroot/xls \
 --inc_target package_test \
 --output_dir $TEST_TMPDIR/out \
 --v 1

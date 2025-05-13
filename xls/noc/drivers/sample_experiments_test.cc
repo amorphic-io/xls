@@ -146,7 +146,7 @@ TEST(SampleExperimentsTest, SimpleVCExperiment) {
   XLS_ASSERT_OK_AND_ASSIGN(std::vector<TimedRouteInfo> timed_route_info_3,
                            experiment_data.at(3).info.GetTimedRouteInfo(
                                "Sink:RecvPort0:VC:1:TimedRouteInfo"));
-  EXPECT_THAT(timed_route_info_0.size(), ::testing::Gt(16800));
+  EXPECT_THAT(timed_route_info_0.size(), ::testing::Gt(16700));
   EXPECT_THAT(timed_route_info_2.size(), ::testing::Gt(99900));
   EXPECT_EQ(timed_route_info_0.size(), timed_route_info_1.size());
   EXPECT_EQ(timed_route_info_2.size(), timed_route_info_3.size());

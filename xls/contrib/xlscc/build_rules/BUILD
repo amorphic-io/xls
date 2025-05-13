@@ -37,6 +37,11 @@ exports_files(
     visibility = ["//xls:xls_users"],
 )
 
+exports_files(
+    ["ac_types_stub.bzl"],
+    visibility = ["//xls/contrib/xlscc:__subpackages__"],
+)
+
 bzl_library(
     name = "xlscc_rules_bzl",
     srcs = ["xlscc_rules.bzl"],
