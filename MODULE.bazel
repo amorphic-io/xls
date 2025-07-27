@@ -1,20 +1,22 @@
 module(
     name = "xls",
+    version = "0.0.1",
 )
 
 # Compiler toolchain.
 bazel_dep(name = "toolchains_llvm", version = "1.4.0")
 bazel_dep(name = "llvm-project", version = "21.0.0")
+bazel_dep(name = "rules_cc", version = "0.1.4")
 bazel_dep(name = "rules_python", version = "1.4.1")
 bazel_dep(name = "io_bazel_rules_closure", version="0.15.0")
 bazel_dep(name = "abseil-cpp", version = "20250127.1")
 bazel_dep(name = "abseil-py", version = "2.1.0")
-bazel_dep(name = "bazel_features", version = "1.25.0")
+bazel_dep(name = "bazel_features", version = "1.27.0")
 bazel_dep(name = "bazel_skylib", version = "1.7.1")
 bazel_dep(name = "boringssl", version = "0.20250114.0")
 bazel_dep(name = "cppitertools", version = "2.2")
 bazel_dep(name = "googleapis", version = "0.0.0-20240819-fe8ba054a")
-bazel_dep(name = "grpc", version = "1.71.0")
+bazel_dep(name = "grpc", version = "1.72.0")
 bazel_dep(name = "nlohmann_json", version = "3.11.3.bcr.1")
 bazel_dep(name = "or-tools", version = "9.12")
 bazel_dep(name = "platforms", version = "0.0.11")
@@ -40,14 +42,14 @@ bazel_dep(name = "rules_shell", version = "0.4.1")
 # Dev dependencies
 bazel_dep(name = "fuzztest", version = "20250214.0", dev_dependency = True)
 bazel_dep(name = "google_benchmark", version = "1.9.1", dev_dependency = True)
-bazel_dep(name = "googletest", version = "1.15.2", dev_dependency = True)
+bazel_dep(name = "googletest", version = "1.17.0", dev_dependency = True)
 
 # Repositories we don't really depend on directly, but we need to provide
 # for other dependencies as they are using old versions that are not
 # compatible with current bazel.
-bazel_dep(name = "rules_bison", version = "0.3")
-bazel_dep(name = "rules_flex", version = "0.3")
-bazel_dep(name = "rules_java", version = "8.7.2")
+bazel_dep(name = "rules_bison", version = "0.4")
+bazel_dep(name = "rules_flex", version = "0.4")
+bazel_dep(name = "rules_java", version = "8.11.0")
 bazel_dep(name = "protoc-gen-validate", version = "1.2.1.bcr.1")
 
 # compilation DB; build_cleaner
@@ -60,7 +62,7 @@ git_override(
 )
 git_override(
     module_name = "rules_hdl",
-    commit = "f9543189bb05011baae8641635051ab9fc9e3aef",
+    commit = "df1cf7ebb7e04921aa06493d008a4777330756b9",
     remote = "https://github.com/amorphic-io/rules_hdl",
 )
 git_override(
@@ -216,8 +218,8 @@ use_repo(hdl, "org_theopenroadproject_asap7_pdk_sc7p5t_28")
 use_repo(hdl, "org_theopenroadproject_asap7_pdk_sc6t_26")
 use_repo(hdl, "org_theopenroadproject_asap7_pdk_sc7p5t_27")
 
-llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
-llvm.toolchain(
-    llvm_version = "19.1.7",
-)
-use_repo(llvm, "llvm_toolchain")
+#llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
+#llvm.toolchain(
+#    llvm_version = "19.1.7",
+#)
+#use_repo(llvm, "llvm_toolchain")
